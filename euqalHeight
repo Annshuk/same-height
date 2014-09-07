@@ -1,0 +1,15 @@
+plugins for same height
+
+"user strict";
+(function($){
+	$.fn.equalHeight = function(val){
+		var maxHeight = 0;
+		val.each(function(){
+			var thisHeight = $(this).height();
+				if(thisHeight > maxHeight) {
+					maxHeight = thisHeight;
+				}
+			})
+			val.height(maxHeight);
+	}
+})(jQuery);
